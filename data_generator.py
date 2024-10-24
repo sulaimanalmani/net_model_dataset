@@ -20,8 +20,6 @@ class DataGenerator:
         self.timestamp_arr = self.input_dataset['time_stamp_arr']
         self.inter_arrival_time_arr = self.input_dataset['time_stamp_arr'].apply(lambda times: [times[1]-times[0]] + [times[i+1] - times[i] for i in range(len(times) - 1)])
         self.time_in_sys_arr = self.output_dataset['time_in_sys_arr']
-        self.output_dataset.drop(columns=['time_in_sys_arr', 'time_stamp_arr'], inplace=True)
-        self.input_dataset.drop(columns=['time_stamp_arr'], inplace=True)
 
         self.norm_type = norm_type
         self.vnf_type = vnf_type
