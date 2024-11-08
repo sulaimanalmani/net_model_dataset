@@ -8,14 +8,16 @@ Dataset for creating 5G slice models.
    Before you can use the dataset, you need to extract the contents of the `.zip` files. You can do this using any standard file extraction tool. For example, on a Unix-based system, you can use the following command:
 
    ```bash
-   unzip ran.zip
-   unzip ovs.zip
-   unzip upf.zip
-   unzip slice.zip
-   unzip slice_mono.zip
+   sh extract_data.sh
    ```
 
-2. **Run `data_generator.py`:**
+2. **Install the required packages:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run `data_generator.py`:**
 
    Once the files are extracted, you need to run the `data_generator.py` script to load the data. This script loads the extracted files, and splits the data into train/val/test sets.
 
@@ -26,15 +28,6 @@ Dataset for creating 5G slice models.
    ```
 
    Ensure that you have Python installed and that you are in the correct directory where `data_generator.py` is located.
-
-## Requirements
-
-- Python 3.x
-- pandas
-- numpy
-- matplotlib
-- ast (part of Python's standard library, no installation needed)
-- math (part of Python's standard library, no installation needed)
 
 ## Notes
 
