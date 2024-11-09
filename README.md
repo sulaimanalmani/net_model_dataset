@@ -29,11 +29,27 @@ Dataset for creating 5G slice models.
 
    Ensure that you have Python installed and that you are in the correct directory where `data_generator.py` is located.
 
-## Notes
+## Directory structure
+- RAN
+   - net_model_dataset/ran/input_dataset.pkl
+   - net_model_dataset/ran/output_dataset.pkl
+- OvS
+   - net_model_dataset/ovs/input_dataset.pkl
+   - net_model_dataset/ovs/output_dataset.pkl
+- UPF
+   - net_model_dataset/upf/input_dataset.pkl
+   - net_model_dataset/upf/output_dataset.pkl
+- Slice Mono
+   - net_model_dataset/slice_mono/input_dataset.pkl
+   - net_model_dataset/slice_mono/output_dataset.pkl
+- Slice
+   - net_model_dataset/slice/input_dataset.pkl
+   - net_model_dataset/slice/output_dataset.pkl
+
 
 ## Data Description
 
-### Input DataFrame
+### Input Data
 
 The dataset contains feature extracted from VNF input and output packet traces over 1 second windows.
 
@@ -44,10 +60,10 @@ The input DataFrame contains the following columns:
 - **throughput**: The input throughput.
 - **inter_arrival_time_mean**: The mean time between packet arrivals.
 - **inter_arrival_time_std**: The standard deviation of the time between packet arrivals.
-- **res**: Resource allocation (CPU (milicores) for RAN, and throughput (Mbps) for OvS)
+- **res**: Resource allocation (CPU (milicores) for RAN and UPF, and throughput (Mbps) for OvS)
 - **time_stamp_arr**: Time stamp array of the packet arrivals. Can be used to calculate the inter-arrival time.
 
-### Output DataFrame
+### Output Data
 
 The output DataFrame contains the following columns:
 
@@ -58,17 +74,3 @@ The output DataFrame contains the following columns:
 - **inter_arrival_time_std**: The standard deviation of the time between packet arrivals.
 - **time_in_sys_arr**: Array of times each packet spends in the VNF (nan represents packet drop)
 - **time_stamp_arr**: Time stamp array of the packet departure.
-
-## File Description
-
-- **ran.zip**: Contains data for the RAN.
-- **ovs.zip**: Contains data for OvS.
-- **upf.zip**: Contains data for UPF.
-- **slice_mono.zip**: Contains data for end-to-end slice.
-- **slice.zip**: Contains data for end-to-end slice.
-
-### Usage in paper
-
-- **ran.zip, ovs.zip, upf.zip**: Used to train vNetRunner and Dev-Pkt in the paper.
-- **slice_mono.zip**: Used to train Net-Flow.
-- **slice.zip**: Used to test the slice models from the different approaches.
