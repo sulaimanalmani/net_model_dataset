@@ -60,7 +60,7 @@ The input DataFrame contains the following columns:
 - **throughput**: The input throughput.
 - **inter_arrival_time_mean**: The mean time between packet arrivals.
 - **inter_arrival_time_std**: The standard deviation of the time between packet arrivals.
-- **res**: Resource allocation (CPU (milicores) for RAN and UPF, and throughput (Mbps) for OvS)
+- **res**: Resource allocation (CPU (milicores) for RAN and UPF, and throughput (Mbps) for OvS).
 - **time_stamp_arr**: Time stamp array of the packet arrivals. Can be used to calculate the inter-arrival time.
 
 ### Output Data
@@ -68,9 +68,9 @@ The input DataFrame contains the following columns:
 The output DataFrame contains the following columns:
 
 - **packet_size**: The size of the packets.
-- **packet_rate**: The rate at which packets are sent (pps)
+- **packet_rate**: The rate at which packets are sent (pps).
 - **throughput**: The output throughput.
 - **inter_arrival_time_mean**: The mean time between packet arrivals.
 - **inter_arrival_time_std**: The standard deviation of the time between packet arrivals.
-- **time_in_sys_arr**: Array of times each packet spends in the VNF (nan represents packet drop)
+- **time_in_sys_arr**: Array of times each packet spends in the VNF (nan represents packet drop).
 - **time_stamp_arr**: Time stamp array of the packet departure.
