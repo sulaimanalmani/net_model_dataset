@@ -13,6 +13,8 @@ Dataset for creating 5G slice models.
 
 2. **Install the required packages:**
 
+   Make sure to use python3.10 for the .pkl files to load properly.
+
    ```bash
    pip install -r requirements.txt
    ```
