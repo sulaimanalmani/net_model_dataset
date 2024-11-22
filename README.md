@@ -76,3 +76,10 @@ The output DataFrame contains the following columns:
 - **inter_arrival_time_std**: The standard deviation of the time between packet arrivals.
 - **time_in_sys_arr**: Array of times each packet spends in the VNF (nan represents packet drop).
 - **time_stamp_arr**: Time stamp array of the packet departure.
+
+
+## Using the dataset
+
+Please refer the the following repository which shows a simple example of how to use the dataset for making a slice model, and using the model for dynamic resource allocation:
+
+https://github.com/sulaimanalmani/5GDynamicResourceAllocation
